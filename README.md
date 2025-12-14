@@ -122,9 +122,3 @@ A brief overview of the key folders in this Laravel project:
 * **Role**: Intern (1 Month)
 * **Company**: ATMT
 * **GitHub**: [kushagrakushwah](https://github.com/kushagrakushwah)
-
----
-
-## 📝 License
-
-This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
