@@ -1,61 +1,130 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# ATMT Chatbot - Laravel MVC Application
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+![Laravel](https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![MVC Pattern](https://img.shields.io/badge/Architecture-MVC-blue?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
-## About Laravel
+## 📋 About The Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This repository contains the source code for a **Chatbot Application** developed during a **1-month internship at ATMT**.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+The project is built using the **Laravel** PHP framework, following the **Model-View-Controller (MVC)** architectural pattern. It is designed to automate customer interactions, answer frequently asked questions, and provide support services relevant to ATMT's business operations (e.g., query handling, user assistance).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🎯 Objective
+The primary goal of this project was to create an interactive conversational interface that enhances user engagement and reduces manual support workload by providing instant responses to common queries.
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## 🚀 Features
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* **Interactive Chat Interface**: A user-friendly, real-time chat widget for users to send queries.
+* **MVC Architecture**: Clean separation of logic (Controllers), data (Models), and presentation (Views).
+* **Admin Dashboard**: (Optional - *Enable if applicable*) A backend panel to view chat logs and manage bot responses.
+* **Keyword/Logic Matching**: Processes user input and fetches appropriate responses from the database.
+* **Data Persistence**: Stores conversation history and user details in a MySQL database.
+* **Responsive Design**: The chat interface is optimized for both desktop and mobile devices.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🛠️ Technology Stack
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* **Backend Framework**: [Laravel](https://laravel.com/) (PHP)
+* **Frontend**: HTML5, CSS3, JavaScript (jQuery/AJAX for asynchronous messaging)
+* **Templating Engine**: Laravel Blade
+* **Database**: MySQL
+* **Server**: Apache/Nginx
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+## ⚙️ Installation & Setup
 
-## Contributing
+Follow these steps to set up the project locally.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### Prerequisites
+Ensure you have the following installed:
+* PHP (v8.0 or higher)
+* Composer
+* MySQL
+* Node.js & NPM (optional, for compiling assets)
 
-## Code of Conduct
+### Steps
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+1.  **Clone the Repository**
+    ```bash
+    git clone [https://github.com/kushagrakushwah/CHATBOT-ATMT-Laravel-MVC-.git](https://github.com/kushagrakushwah/CHATBOT-ATMT-Laravel-MVC-.git)
+    cd CHATBOT-ATMT-Laravel-MVC-
+    ```
 
-## Security Vulnerabilities
+2.  **Install PHP Dependencies**
+    ```bash
+    composer install
+    ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+3.  **Environment Setup**
+    * Duplicate the `.env.example` file and rename it to `.env`.
+    ```bash
+    cp .env.example .env
+    ```
+    * Open the `.env` file and configure your database credentials:
+    ```env
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_database_name
+    DB_USERNAME=your_username
+    DB_PASSWORD=your_password
+    ```
 
-## License
+4.  **Generate Application Key**
+    ```bash
+    php artisan key:generate
+    ```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+5.  **Run Migrations**
+    Create the necessary tables in your database:
+    ```bash
+    php artisan migrate
+    ```
+
+6.  **Serve the Application**
+    Start the local development server:
+    ```bash
+    php artisan serve
+    ```
+    The application will be accessible at `http://127.0.0.1:8000`.
+
+---
+
+## 📂 Project Structure
+
+A brief overview of the key folders in this Laravel project:
+
+* `app/Http/Controllers`: Contains the logic for handling chat requests (e.g., `ChatController.php`).
+* `app/Models`: Database models representing tables (e.g., `Message.php`, `User.php`).
+* `resources/views`: Blade templates for the frontend UI (e.g., `welcome.blade.php`, `chat/index.blade.php`).
+* `routes/web.php`: Define the URL routes for the chatbot.
+* `database/migrations`: Schema definitions for the database tables.
+
+---
+
+## 💡 How It Works
+
+1.  **User Input**: The user types a message in the chat interface.
+2.  **AJAX Request**: JavaScript sends the message to a Laravel Controller via a POST request.
+3.  **Processing**: The Controller analyzes the input (using keyword matching or NLP logic) and queries the database for a matching answer.
+4.  **Response**: The system returns the response to the frontend, which updates the chat window dynamically without reloading the page.
+
+---
+
+## 👨‍💻 Author
+
+**Kushagra Kushwah**
+* **Role**: Intern (1 Month)
+* **Company**: ATMT
+* **GitHub**: [kushagrakushwah](https://github.com/kushagrakushwah)
+
+---
+
+## 📝 License
+
+This project is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
